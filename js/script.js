@@ -49,14 +49,54 @@ function save_param() {
 	inner_stamina.innerHTML = stamina.value;
 }
 
-//alert(speed.value+agility.value);
-
-
-
 window.addEventListener("load", save_param, true);
 
 
 // ========== create opponent
+var perc_name_2	= "Player_2";	
+var force_2		= 25;	
+var agility_2	= 25;
+var speed_2		= 25;
+var stamina_2 	= 25;
+
 // ========== fight
+// random diapazon
+/*function getRandomInt(min, max){
+	return Math.floor(Math.random() * (max - min + 1))+min;
+}*/
+
+var health 		= stamina.value*10;
+var health_2	= stamina_2*10;
+var damag 		= 0;
+var damag_2 	= 0;
+
+for(var i=0; damag<health && damag_2<health_2; i++){
+	if((Math.random()*100) > (speed.value*1)){
+		if((Math.random()*100) <= agility_2){
+			damag 	= damag + force_2*2;
+		}else{
+			damag 	= damag + force_2;
+		}		
+	}
+
+	if((Math.random()*100) > (speed_2)){
+		if((Math.random()*100) <= (agility.value)*1){
+			damag_2	= damag_2 + force.value*2;
+		}else{
+			damag_2 = damag_2 + force.value*1;
+		}		
+	}
+}
+
+if(damag>=health && damag_2<health_2){
+	alert("Поражение... " + "урон по вам " + damag + "урон по противнику " + damag_2);
+}else if(damag_2>=health_2 && damag<health){
+	alert("Победа! " + "урон по вам " + damag + "урон по противнику " + damag_2);
+}else{
+	alert("Ничья! " + "урон по вам " + damag + "урон по противнику " + damag_2);
+}
+
+//alert(health + " " + health);
+
 // ========== loot
 // ========== edit pers with bonus
