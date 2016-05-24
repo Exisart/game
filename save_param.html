@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>game</title>
+</head>
+
+<body>
+	<form>
+		<input id="force" type="number" name="force" min=10 max=90><br>
+		<input id="agility" type="number" name="agility" min=10 max=90><br>
+		<input id="speed" type="number" name="speed" min=10 max=90><br>
+		<input id="stamina" type="number" name="stamina" min=10 max=90><br>
+	</form>
+	<input id="save" type="button" name="save" value="save"> 
+
+	<script type="text/javascript">
+		
+		var forcew = document.querySelector("input[name='force']");	
+		var agilityw = document.querySelector("input[name='agility']");	
+		var speedw = document.querySelector("input[name='speed']");	
+		var staminaw = document.querySelector("input[name='stamina']");	
+
+		function newParam(){
+			var sforce = document.getElementById('force');
+			sforce.innerHTML = forcew.value;
+			var sagility = document.getElementById('agility');
+			sagility.innerHTML = agilityw.value;
+			var sspeed = document.getElementById('speed');
+			sspeed.innerHTML = speedw.value;
+			var sstamina = document.getElementById('stamina');
+			sstamina.innerHTML = staminaw.value;
+		}		
+
+		document.querySelector("input[name='save']").onclick = function() {				
+			localStorage.setItem("force", forcew.value);
+			localStorage.setItem("agility", agilityw.value);
+			localStorage.setItem("speed", speedw.value);
+			localStorage.setItem("stamina", staminaw.value);
+
+			newParam();			
+		}
+
+		// Извлечем данные из хранилища
+		function save_param() {
+			forcew.value	= localStorage.getItem("force");
+			agilityw.value	= localStorage.getItem("agility");
+			speedw.value	= localStorage.getItem("speed");
+			staminaw.value	= localStorage.getItem("stamina");
+		}
+
+		window.addEventListener("load", save_param, true);
+
+		function init() {
+			newParam();
+		}
+		window.addEventListener("load", init, true);
+
+	</script>	
+</body>
+</html>
