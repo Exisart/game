@@ -22,7 +22,7 @@ document.querySelector("input[name='clear']").onclick = function() {
 	localStorage.setItem("force", "25");
 	localStorage.setItem("agility", "25");
 	localStorage.setItem("speed", "25");
-	localStorage.setItem("stamina", "25");	
+	localStorage.setItem("stamina", "25");
 }
 
 //return  perc info
