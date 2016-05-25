@@ -70,7 +70,7 @@ var health_2	= stamina_2*10;
 var damag 		= 0;
 var damag_2 	= 0;
 
-for(var i=0; damag<health && damag_2<health_2; i++){
+for( ; damag<health && damag_2<health_2; ){
 	if((Math.random()*100) > (speed.value*1)){
 		if((Math.random()*100) <= agility_2){
 			damag 	= damag + force_2*2;
@@ -79,7 +79,7 @@ for(var i=0; damag<health && damag_2<health_2; i++){
 		}		
 	}
 
-	if((Math.random()*100) > (speed_2)){
+	if((Math.random()*100) > speed_2){
 		if((Math.random()*100) <= (agility.value)*1){
 			damag_2	= damag_2 + force.value*2;
 		}else{
@@ -100,3 +100,6 @@ if(damag>=health && damag_2<health_2){
 
 // ========== loot
 // ========== edit pers with bonus
+
+
+// audioPlayer.parentNode.removeChild(audioPlayer); - удаляем элемент аудиоплеер
