@@ -6,39 +6,36 @@
 </head>
 
 <body>
+	<!-- perc param -->
+	<div id="perc_param">
+		<div id="perc_name"></div>
+		<div id="perc_lvl"></div>
+		<div id="perc_force"></div>
+		<div id="perc_agility"></div>
+		<div id="perc_speed"></div>
+		<div id="perc_stamina"></div>
+	</div>
+	
+	<!-- menu --> 
+	<div>
+		<ul>
+			<li><a href="#">Perc</a></li>
+			<li><a href="#">Edit perce</a></li>
+			<li><a href="#">fight</a></li>
+		</ul>
+	</div>
 
-	<input id="force" type="number" name="force" min=10 max=90><br>
-	<input id="agility" type="number" name="agility" min=10 max=90><br>
-	<input id="speed" type="number" name="speed" min=10 max=90><br>
-	<input id="stamina" type="number" name="stamina" min=10 max=90><br>
-	<input id="save" type="button" name="save" value="save">
+	<!-- pers edit -->
+	<form>
+		<input id="name" type="text" name="name"><br>
+		<input id="force" type="number" name="force" min=10 max=90><br>
+		<input id="agility" type="number" name="agility" min=10 max=90><br>
+		<input id="speed" type="number" name="speed" min=10 max=90><br>
+		<input id="stamina" type="number" name="stamina" min=10 max=90><br>
+		<input type="submit" name="clear" value="Clear">
+		<input id="save" type="button" name="save" value="save">
+	</form>	
 
-	<script type="text/javascript" charset="utf-8">
-		
-		var forcew = document.querySelector("input[name='force']");	
-		var agilityw = document.querySelector("input[name='agility']");	
-		var speedw = document.querySelector("input[name='speed']");	
-		var staminaw = document.querySelector("input[name='stamina']");		
-
-		document.querySelector("input[name='save']").onclick = function() {				
-			localStorage.setItem("force", forcew.value);
-			localStorage.setItem("agility", agilityw.value);
-			localStorage.setItem("speed", speedw.value);
-			localStorage.setItem("stamina", staminaw.value);
-		}
-
-		// Извлечем данные из хранилища
-		function save_param() {
-			forcew.value	= localStorage.getItem("force");
-			agilityw.value	= localStorage.getItem("agility");
-			speedw.value	= localStorage.getItem("speed");
-			staminaw.value	= localStorage.getItem("stamina");
-		}
-
-		window.addEventListener("load", save_param, true);
-
-		//alert(forcew.value);
-
-	</script>	
+	<script src="js/script.js"></script>
 </body>
 </html>
