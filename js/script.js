@@ -10,7 +10,7 @@ var stamina = $('#stamina').value;
 
 $('#clear').click(function(){
 	$('#name').val("name");
-	('#force').value 	= 25;
+	$('#force').value 	= 25;
 	$('#agility').value = 25;
 	$('#speed').value 	= 25;
 	$('#stamina').value = 25;
