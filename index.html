@@ -3,19 +3,10 @@
 <head>
 	<meta charset="utf-8" />
 	<title>game</title>
+	<link rel="stylesheet" href="css/style.css"></link>
 </head>
 
 <body>
-	<!-- perc param -->
-	<div id="perc_param">
-		<div id="perc_name"></div>
-		<div id="perc_lvl"></div>
-		<div id="perc_force"></div>
-		<div id="perc_agility"></div>
-		<div id="perc_speed"></div>
-		<div id="perc_stamina"></div>
-	</div>
-	
 	<!-- menu --> 
 	<div>
 		<ul>
@@ -25,17 +16,29 @@
 		</ul>
 	</div>
 
+	<button class="tabs visible" id="create">create</button>
+
+	<!-- perc param -->
+	<div class="tabs" id="perc_param">
+		<div id="perc_name"></div>
+		<div id="perc_lvl"></div>
+		<div id="perc_force"></div>
+		<div id="perc_agility"></div>
+		<div id="perc_speed"></div>
+		<div id="perc_stamina"></div>
+	</div>
+
 	<!-- pers edit -->
-	<form>
-		<input id="name" type="text"><br>
+	<form class="tabs" id="edit">
+		<input id="name" type="text" placeholder="Введите имя"><br>
 		<input id="force" type="number"><br>
 		<input id="agility" type="number"><br>
 		<input id="speed" type="number"><br>
 		<input id="stamina" type="number"><br>
-
 		<button id="clear">clear</button>
 		<button id="save">save</button>
 	</form>	
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/script.js"></script>
