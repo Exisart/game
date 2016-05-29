@@ -1,11 +1,45 @@
-*{
-	padding: 0;
+/* Reset+ */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, q, small, strong,b, center, dl, dt, dd, ol, ul, li, form, label, legend, article, aside, canvas, figure, footer, header, hgroup, menu, nav, section, audio, video{
 	margin: 0;
+	padding: 0;
+	font-size: 100%;
 }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}
+a{
+	outline:none;
+}
+a:hover{
+	color:red;
+}
+a img{border:none;}
+.clear{clear:both;}
+.pT10{padding-top:10px;}
+.pT20{padding-top:20px;}
+.pT30{padding-top:30px;}
+.pT40{padding-top:40px;}
 
+/* Author's styles */
 .tabs{
 	display: none;
+	position: relative;
+	float: left;
+	padding: 0 20px;
 }
-.tabs.visible{
+.visible{
 	display: block;
+}
+nav, nav ul{
+	position: relative;
+	float: left;
+}
+nav ul li{
+	position: relative;
+	float: left;
+	list-style-type: none;
+}
+nav ul li a{
+	display: block;
+	padding: 5px 10px;
+	text-decoration: none;
+	font-size: 120%;
 }
