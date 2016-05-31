@@ -12,7 +12,9 @@
 		<ul>
 			<li><a id="main" href="#">Main</a></li>
 			<li><a id="create" href="#">New perc</a></li>
-			<li><a href="#">fight</a></li>
+			<li><a id="edit_a" href="#">Edit perc</a></li>
+			<li><a id="fight" href="#">fight</a></li>
+			<li><a id="create_opponent" href="#">Create opponent</a></li>
 		</ul>
 	</nav>
 	<div class="clear pT20"></div>
@@ -21,12 +23,26 @@
 	<div class="tabs visible" id="perc_param">
 		<div id="perc_name"></div>
 		<img src="http://placehold.it/100x150">		
-		<div>Lvl: <span id="perc_lvl"></span></div>
+		<div>Lvl: <span id="perc_lvl">0</span></div>
 		<div>Force: <span id="perc_force"></span></div>
 		<div>Agility: <span id="perc_agility"></span></div>
 		<div>Speed: <span id="perc_speed"></span></div>
 		<div>Stamina: <span id="perc_stamina"></span></div>
+		<div class="clear pT20"></div>
+
+		<!-- opponent param -->
+		<div id="opponent_param" class="">
+			<div id="opponent_name"></div>
+			<img src="http://placehold.it/100x150">		
+			<div>Lvl: <span id="opponent_lvl">0</span></div>
+			<div>Force: <span id="opponent_force"></span></div>
+			<div>Agility: <span id="opponent_agility"></span></div>
+			<div>Speed: <span id="opponent_speed"></span></div>
+			<div>Stamina: <span id="opponent_stamina"></span></div>
+		</div>
 	</div>
+
+	
 
 	<!-- pers edit -->
 	<form class="tabs" id="edit">
